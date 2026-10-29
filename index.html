@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dineora — a refined dining experience. Explore our menu and place a demo order.">
+  <title>Dineora | A Taste Worth Remembering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">A little something special — enjoy <strong>10% off</strong> your first demo order with <strong>WELCOME10</strong></div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Dineora home"><span class="brand-icon">D</span><span>DINEORA<small>DINING & EXPERIENCES</small></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navigation"><a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#events">Events</a><a href="#reservation">Reservations</a></nav>
+    <a class="button button-dark header-book" href="#menu">Order online <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow light">GOOD FOOD. GOOD COMPANY.</span>
+        <h1>Gather around<br>something <em>beautiful.</em></h1>
+        <p>Seasonal ingredients, thoughtful cooking, and moments worth lingering over. Welcome to your new favourite table.</p>
+        <div class="hero-actions"><a class="button button-cream" href="#menu">Explore the menu <span>→</span></a><a class="under-link" href="#reservation">Reserve a table ↓</a></div>
+        <div class="hero-meta"><span>✦ FRESH, SEASONAL MENUS</span><span>✦ MADE WITH HEART</span></div>
+      </div>
+      <div class="slide-controls"><button id="prev-slide" aria-label="Previous slide">←</button><span id="slide-count">01 / 03</span><button id="next-slide" aria-label="Next slide">→</button></div>
+      <div class="hero-caption"><span id="slide-caption">The art of slow dining</span><span id="slide-story">01 — OUR STORY</span></div>
+    </section>
+
+    <section class="intro section-wrap reveal">
+      <div class="intro-mark">D.</div>
+      <div><span class="eyebrow">A PLACE TO COME TOGETHER</span><h2>More than a meal.<br><em>A feeling.</em></h2></div>
+      <p>At Dineora, every detail has a purpose — from the first fragrant bite to the last shared laugh. Come as you are; leave with a story.</p>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-title reveal"><div><span class="eyebrow">FROM OUR KITCHEN</span><h2>Made to be <em>savour​ed.</em></h2></div><p>Guest favourites, prepared with seasonal produce and a generous helping of care.</p></div>
+      <div class="menu-tools">
+        <div class="filters" id="menu-filters"><button class="filter active" data-category="All">All dishes</button><button class="filter" data-category="Starters">Starters</button><button class="filter" data-category="Mains">Mains</button><button class="filter" data-category="Desserts">Desserts</button><button class="filter" data-category="Drinks">Drinks</button></div>
+        <label class="search-box"><span>⌕</span><input id="menu-search" type="search" placeholder="Find a dish..." aria-label="Search dishes"></label>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="menu-note">Sample menu and prices for this student project. Select your dishes and create a printable bill.</p>
+    </section>
+
+    <section class="experience" id="experiences">
+      <div class="experience-photo" role="img" aria-label="Warm, elegant restaurant interior"></div>
+      <div class="experience-copy"><span class="eyebrow light">MAKE IT A MOMENT</span><h2>Every occasion<br>has a <em>place.</em></h2><p>From spontaneous catch-ups to life's biggest milestones, let us help you set the scene.</p>
+        <div class="occasion-list"><a href="#reservation"><span>01</span><span><strong>Birthday dinners</strong><small>A little sparkle for your special day</small></span><b>↗</b></a><a href="#reservation"><span>02</span><span><strong>Anniversary evenings</strong><small>Slow down and celebrate together</small></span><b>↗</b></a><a href="#reservation"><span>03</span><span><strong>Private dining</strong><small>Your people, your own corner</small></span><b>↗</b></a></div>
+        <a class="button button-cream" href="#reservation">Plan your occasion <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="reservation section-wrap reveal" id="reservation">
+      <div class="reservation-intro"><span class="eyebrow">YOUR TABLE IS WAITING</span><h2>Let's make<br>it <em>yours.</em></h2><p>Plan a relaxed evening with friends, family, or someone special. This demo form shows a local confirmation.</p><div class="reservation-detail"><span>◷</span><div><strong>Opening hours</strong><small>Mon–Sun · 12:00 PM – 10:00 PM</small></div></div><div class="reservation-detail"><span>⌖</span><div><strong>Find us</strong><small>12 Garden Lane, Your City</small></div></div></div>
+      <form class="booking-form" id="booking-form">
+        <div class="form-heading"><span class="eyebrow">RESERVATIONS</span><h3>Reserve a table</h3><p>Fields marked * are required.</p></div>
+        <div class="form-grid">
+          <label>Full name *<input name="name" required maxlength="80" placeholder="Your name"></label>
+          <label>Email address *<input name="email" type="email" required placeholder="you@example.com"></label>
+          <label>Phone number<input name="phone" type="tel" placeholder="+91 98765 43210"></label>
+          <label>Guests *<select name="guests" required><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option></select></label>
+          <label>Date *<input name="date" id="booking-date" type="date" required></label>
+          <label>Preferred time *<select name="time" required><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option selected>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></label>
+          <label>Seating preference<select name="seating"><option>Any available</option><option>Indoor</option><option>Outdoor</option><option>Window seat</option></select></label>
+          <label>Occasion<select name="occasion"><option>Just dining</option><option>Birthday dinner</option><option>Anniversary</option><option>Private dining</option><option>Family gathering</option></select></label>
+        </div>
+        <button class="button button-dark full-button" type="submit">Confirm demo reservation <span>→</span></button>
+        <p class="privacy-note" id="booking-message">Demo only — this form does not contact a real restaurant.</p>
+      </form>
+    </section>
+
+    <section class="gallery-section section-wrap" id="gallery"><div class="section-title reveal"><div><span class="eyebrow">A GLIMPSE INSIDE</span><h2>Little moments, <em>beautifully served.</em></h2></div><p>Warm lights, thoughtful plates, and a space made for sharing.</p></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Elegant restaurant table setting" loading="lazy"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85" alt="Freshly prepared meal" loading="lazy"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=85" alt="Restaurant interior" loading="lazy"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=85" alt="Restaurant dining experience" loading="lazy"></div></section>
+
+    <section class="reviews-section"><div class="section-wrap"><span class="eyebrow">KIND WORDS</span><h2>Good company. <em>Great memories.</em></h2><div class="review-card"><div class="stars">★★★★★</div><blockquote id="review-text">“Beautiful atmosphere, thoughtful service, and every dish felt special. We stayed longer than planned.”</blockquote><div class="review-bottom"><strong id="review-author">— A happy guest</strong><div><button id="review-prev" aria-label="Previous review">←</button><button id="review-next" aria-label="Next review">→</button></div></div></div></div></section>
+  </main>
+
+
+    <section class="chef-section section-wrap reveal" id="chef">
+      <div class="chef-photo-wrap">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=85" alt="Chef preparing a fresh dish" loading="lazy">
+        <div class="chef-stamp"><span>MADE WITH</span><strong>♥</strong><span>CARE</span></div>
+      </div>
+      <div class="chef-copy">
+        <span class="eyebrow">A NOTE FROM OUR KITCHEN</span>
+        <h2>Good food begins<br>with <em>good intention.</em></h2>
+        <p>We believe memorable food doesn't need to be complicated. It starts with seasonal ingredients, patient preparation, and a team that cares about every plate leaving the kitchen.</p>
+        <p>Our menu changes with the season, giving familiar flavours a thoughtful little twist. Every visit should feel welcoming, relaxed, and worth remembering.</p>
+        <div class="chef-signature">With warmth, <span>Team Dineora</span></div>
+      </div>
+    </section>
+
+    <section class="events-section section-wrap" id="events">
+      <div class="section-title reveal"><div><span class="eyebrow">GATHER A LITTLE CLOSER</span><h2>Moments made <em>memorable.</em></h2></div><p>Thoughtful experiences for celebrations big and small. Choose an occasion and send us a demo enquiry.</p></div>
+      <div class="event-grid">
+        <article class="event-card reveal"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85" alt="Celebration table setup" loading="lazy"><div class="event-card-copy"><span class="eyebrow">CELEBRATIONS</span><h3>Private celebrations</h3><p>Bring your favourite people together for birthdays, family dinners, and milestones.</p><button class="text-action event-enquiry" data-event="Private celebrations">Enquire about this <span>↗</span></button></div></article>
+        <article class="event-card reveal"><img src="https://images.unsplash.com/photo-1517457373958-b7redd?auto=format&fit=crop&w=900&q=85" alt="Long dinner table for a group" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85'"><div class="event-card-copy"><span class="eyebrow">GROUP DINING</span><h3>Gather around</h3><p>A welcoming setting for team dinners, reunions, and long conversations.</p><button class="text-action event-enquiry" data-event="Group dining">Enquire about this <span>↗</span></button></div></article>
+        <article class="event-card reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Warm restaurant interior" loading="lazy"><div class="event-card-copy"><span class="eyebrow">SPECIAL EVENINGS</span><h3>Chef's table</h3><p>Ask about a curated menu for an intimate evening with a little extra care.</p><button class="text-action event-enquiry" data-event="Chef's table">Enquire about this <span>↗</span></button></div></article>
+      </div>
+      <p class="event-note">Event enquiries are demo-only and will be shown as an on-page confirmation.</p>
+    </section>
+
+    <section class="perks-section">
+      <div class="section-wrap perks-inner reveal">
+        <div><span class="eyebrow light">THE DINEORA LITTLE EXTRAS</span><h2>Good things come<br>to those who <em>gather.</em></h2><p>Join our demo guest list for seasonal menu news, special evenings, and little surprises from the kitchen.</p></div>
+        <form class="newsletter-form" id="newsletter-form"><label for="newsletter-email">Your email address</label><div><input id="newsletter-email" name="email" type="email" required placeholder="you@example.com"><button class="button button-cream" type="submit">Join the list <span>→</span></button></div><small id="newsletter-message">Demo sign-up only. We won't send emails.</small></form>
+      </div>
+    </section>
+
+    <section class="faq-section section-wrap reveal" id="faq">
+      <div class="faq-intro"><span class="eyebrow">A FEW HELPFUL DETAILS</span><h2>Good to <em>know.</em></h2><p>Quick answers before you visit or place a demo order.</p></div>
+      <div class="faq-list">
+        <details><summary>Can I change my order after adding items?<span>＋</span></summary><p>Yes. Return to the menu and add more items. On the bill page, you can also change quantities or remove items before printing your sample bill.</p></details>
+        <details><summary>Can I request vegetarian options?<span>＋</span></summary><p>Use the menu categories and dish descriptions to explore options. This sample menu is for demonstration; please confirm ingredients and dietary needs with a real restaurant.</p></details>
+        <details><summary>Does this website accept real payments?<span>＋</span></summary><p>No. This is a front-end student project. The order summary and bill are generated in your browser; no payment is collected and no order is sent to a restaurant.</p></details>
+        <details><summary>Can I print my order bill?<span>＋</span></summary><p>Yes. Choose “Print / Save as PDF” on the bill page, then select your printer or “Save as PDF” in the browser print dialog.</p></details>
+        <details><summary>How do I make a table reservation?<span>＋</span></summary><p>Fill in the reservation form on this page. It will show a local confirmation for demonstration, but it does not reserve a real table.</p></details>
+      </div>
+    </section>
+
+  <footer class="footer"><a class="brand brand-footer" href="#home"><span class="brand-icon">D</span><span>DINEORA<small>DINING & EXPERIENCES</small></span></a><p>Made for moments around the table.</p><div><a href="#menu">Menu</a><a href="#reservation">Reservations</a><a href="#gallery">Gallery</a></div><small>© <span id="year"></span> Dineora. Student project demo.</small></footer>
+
+  <div class="cart-dock" id="cart-dock" aria-live="polite"><div><span class="cart-count" id="cart-count">0</span><span><strong id="cart-label">Your order</strong><small id="cart-subtotal">₹0</small></span></div><button class="button button-cream" id="checkout-button">Review order <span>→</span></button></div>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
